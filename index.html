@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css"/>
+    <title>归去来兮女士的灵堂</title>
+  </head>
+  <body class="mdui-color-black">
+  <body class="mdui-theme-layout-dark">
+    <center><h1><big>归去来兮女士的灵堂</big></h1></center>
+    <center><div class="mdui-color-light-blue-800">归去来兮女士何许人也?</div></center>
+    <center><div class="mdui-color-light-blue-800">归去来兮女士乃东洋国一奇女子也，本名唤作喜多郁代(Kita Ikuy),在动漫作品 孤独摇滚! 中登场，<del>并不幸身亡</del>。</div></center>
+    <br>
+    <center><img src="https://s1.ax1x.com/2022/12/29/pSSxv5t.png" width="500px" height="300px"></center>
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <center><div>归去来兮女士遗照</div></center>
+    <br>
+    <center><div>虽然归去来兮女士已经去世了，但是邪恶的屑山田凉仍然尝试偷吃贡品</div></center>
+    <center><div>快来敲木鱼赶走邪恶的山田凉，并且积累阴德!</div></center>
+    <br>
+    <center><div><button id="click-btn" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" onclick="playAudio()">点按敲击</button>
+        <p>已经敲了<span id="number">0</span>次</p></center>
+    </div>
+    <script>
+        function playAudio() { 
+        var audio = new Audio('qiao.mp3'); 
+        audio.play(); 
+    } 
+        var number = parseInt(localStorage.getItem('number')) || 0; 
+        document.getElementById('number').innerText = number;
+        document.getElementById('click-btn').addEventListener('click',function() {
+            number +=1;
+            localStorage.setItem('number', number);
+            document.getElementById('number').innerText = number
+        });
+    </script>
+    <footer><center>迫害 喜多郁代 小姐 With ❤ | By LandMeXPro | MDUI</center></footer>
+  </body>
+  </body>
+</html>
